@@ -151,6 +151,6 @@ MESSAGE_TAGS = {
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'darrylwarnakulatesting@gmail.com'
-EMAIL_HOST_PASSWORD = 'Mronik1991'
+EMAIL_HOST_PASSWORD = 'uwtv eyjz fyen ewxy'
 EMAIL_USE_TLS = True
 
