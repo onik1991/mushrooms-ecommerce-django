@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'carts',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -147,10 +148,9 @@ MESSAGE_TAGS = {
 
 
 # SMTP Email Configuration
-
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'darrylwarnakulatesting@gmail.com'
-EMAIL_HOST_PASSWORD = 'uwtv eyjz fyen ewxy'
+EMAIL_HOST_PASSWORD = 'htjc mwqg feof hyax'
 EMAIL_USE_TLS = True
-
