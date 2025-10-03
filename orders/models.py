@@ -46,6 +46,9 @@ class Order(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    # invoice = models.CharField(max_length=250, null=True, blank=True)
+    # paid = models.BooleanField(default=False)
+
     def full_name(self):
         return f'{self.first_name} {self.last_name}'
 

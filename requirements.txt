@@ -1,0 +1,21 @@
+asgiref==3.9.1
+certifi==2025 8.3
+cffi==2.0.0
+charset==4.0.0
+cryptography==46.0.1
+Django==5.3
+django-admin-thumbnails==0.2.9
+django_paypal==2.1
+idna==3.10
+Pillow==11.3.0
+pip_system_certs==5.2
+pycparser==2.23
+pyopenssl==25.3.0
+python-decouple==3.8
+pytz==2025.2
+requests==2.32.5
+six==1.17.0
+sqlparse==0.5.3
+stripe==12.5.1
+typing_extensions==4.15.0
+urllib3==2.5.0
