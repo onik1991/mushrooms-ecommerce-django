@@ -14,6 +14,12 @@
         
         <aside class="col-lg-8">
             <div class="card">
+				<h5 class="card-header">Order Number</h5>
+				<div class="card-body">
+					<p class="card-text">{{order.order_number}}</p>
+				</div>
+			</div>
+            <div class="card">
                 <h5 class="card-header">Billing Address</h5>
                 <div class="card-body">
                     <p class="card-text mb-0">{{order.full_name}}</p>
@@ -102,13 +108,17 @@
                   <dd class="text-right text-dark b"><strong>$ {{grand_total}}</strong></dd>
                 </dl>
                 <hr>
-                <p class="text-center mb-3">
-                    <img src="{% static './images/misc/payments.png' %}" height="26">
-                </p>
+                <form action="/orders/create_checkout_session" method="POST">{% csrf_token %}
+                    <button type="submit" id="checkout-button">Pay with Stripe</button>
+                </form>
+                <!-- <form action="/orders/payments/" method="POST">{% csrf_token %}
+                    <button type="submit" id="checkout-button">Pay</button>
+                </form> -->
                 <!-- <a href="{% url 'checkout' %}" class="btn btn-primary btn-block"> Make Payment </a> -->
-
-                <div id="paypal-button-container"></div>
-                <p id="result-message"></p>
+                <center> 
+                    {{ paypal_button.render }} 
+                </center>
+                
 
             </div> <!-- card-body.// -->
             </div> <!-- card.// -->
@@ -124,7 +134,7 @@
     </div> <!-- container .//  -->
     </section>
     <!-- ========================= SECTION CONTENT END// ========================= -->
-
+<!-- 
     <script>
         const paypalButtons = window.paypal.Buttons({
             style: {
@@ -238,6 +248,6 @@
             const container = document.querySelector("#result-message");
             container.innerHTML = message;
         }
-        </script>
+        </script> -->
 
 {% endblock %}
